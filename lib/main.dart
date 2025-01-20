@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'PROS',
+      title: 'Sensory Load Monitor',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
@@ -131,25 +131,32 @@ class _SinglePageState extends State<SinglePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('PROS'),
-        actions: [
-          Icon(
-            Icons.bluetooth_connected,
-            color: Colors.green,
-          ),
-          const SizedBox(width: 10),
-          const Icon(Icons.signal_cellular_alt, color: Colors.green),
-          const SizedBox(width: 16),
-          Row(
-            children: const [
-              Icon(Icons.battery_full, color: Colors.blue),
-              Text('75%', style: TextStyle(fontSize: 14)),
-            ],
-          ),
-          const SizedBox(width: 16),
-        ],
-      ),
+appBar: AppBar(
+  title: const Text(
+    'Sensory Load Monitor',
+    style: TextStyle(
+      fontSize: 18,  // Reduce the font size to fit better
+      fontWeight: FontWeight.bold,
+      color: Colors.black,
+    ),
+  ),
+  actions: [
+    Icon(
+      Icons.bluetooth_connected,
+      color: Colors.green,
+    ),
+    const SizedBox(width: 10),
+    const Icon(Icons.signal_cellular_alt, color: Colors.green),
+    const SizedBox(width: 16),
+    Row(
+      children: const [
+        Icon(Icons.battery_full, color: Colors.blue),
+        Text('75%', style: TextStyle(fontSize: 14)),
+      ],
+    ),
+    const SizedBox(width: 16),
+  ],
+),
       body: Row(
         children: [
           // Left Side: Stress Level with Moving Indicator
